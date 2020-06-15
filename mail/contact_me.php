@@ -41,10 +41,10 @@ $body         .= "Mensagem: ".$message       ."\n";
   $mailer->Body      = utf8_decode($body);
   
 if(!$mailer->Send()){
-       echo "Erro ao enviar email";
+       echo "<script>alert('Erro ao enviar :(, tente novamente');document.location='../index.html';</script>";
   }
   else{
     echo "<script>alert('Enviado com sucesso!');document.location='../index.html';</script>";
-    //header("Location: ../index.html");
+    //header("Location: ../index.html"); 
   }
 ?>
